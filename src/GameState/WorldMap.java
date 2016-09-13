@@ -28,6 +28,7 @@ public class WorldMap extends GameState {
 	private boolean saved;
 	private int handX;
 	private int handY;
+	private SaveGame saveGame;
 	
 	
 	public WorldMap(GameStateManager gsm) {
@@ -58,6 +59,11 @@ public class WorldMap extends GameState {
 		}
 		handX = 230;
 		handY = 150;
+		JukeBox.stop("level1");
+		JukeBox.stop("level2");
+		JukeBox.stop("level3");
+		JukeBox.stop("lastboss");
+		saveGame = new SaveGame();
 		for(int i = 0; i < 3; i++){
 			if(i < openLevels){
 				levels.add(pointer);
@@ -172,7 +178,7 @@ public class WorldMap extends GameState {
 
 	@Override
 	public void handleInput() {
-		if(Keys.isPressed(Keys.BUTTONS)){SaveGame.saveGame(); saved = true;}
+		if(Keys.isPressed(Keys.BUTTONS)){saveGame.saveGame(); saved = true;}
 		if(Keys.isPressed(Keys.ENTER)) {saved = false; select(); }
 		if(Keys.isPressed(Keys.UP) || Keys.isPressed(Keys.RIGHT)) {
 			if(currentChoice > -1) {

@@ -9,9 +9,8 @@ import TileMap.TileMap;
 public class Thunder extends MapObject {
 
 	private boolean remove;
-	private boolean hit;
 	private BufferedImage[] sprites;
-	private BufferedImage[] hitSprites;
+
 	
 	
 	//gets thunder graphics

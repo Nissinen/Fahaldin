@@ -13,7 +13,6 @@ import Entity.Player;
 import Entity.PlayerSave;
 import Entity.Portal;
 import Handlers.Keys;
-import Handlers.ProgressHandler;
 import Main.GamePanel;
 import TileMap.Background;
 import TileMap.TileMap;

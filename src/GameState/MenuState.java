@@ -17,6 +17,8 @@ import TileMap.Background;
 public class MenuState extends GameState {
 	
 	private BufferedImage hand;
+	private LoadGame loadGame;
+	private boolean start;
 	private Background bg;
 	private int currentChoice = 0;
 	private String[] options = {
@@ -62,6 +64,7 @@ public class MenuState extends GameState {
 		catch(Exception e) {
 			e.printStackTrace();
 		}
+		loadGame = new LoadGame();
 		
 	}
 	
@@ -118,8 +121,10 @@ public class MenuState extends GameState {
 		}
 		else if ( currentChoice == 1){
 			JukeBox.play("menuSelect");
-			LoadGame.loadGame();
+			start = loadGame.loadGame();
+			if(start){
 			gsm.setState(GameStateManager.WORLDMAP);
+			}
 		}
 		else if ( currentChoice == 2) {
 			JukeBox.play("menuSelect");

@@ -83,7 +83,7 @@ public class Level1BossState extends GameState {
 				//portal
 				portal = new Portal(tileMap, 1);
 				portal.setPosition(270, 34);
-				portal.PortalLocation(270, 338);
+				portal.PortalLocation(270, 334);
 				
 				//set HUD
 				hud = new HUD(player);

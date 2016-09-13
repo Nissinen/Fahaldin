@@ -10,29 +10,32 @@ import Entity.PlayerSave;
 
 public class LoadGame {
 	
-	private static ArrayList<String> strings;
+	private  ArrayList<String> strings;
 	
-	public static void loadGame() {
+	public boolean loadGame() {
 		strings = new ArrayList<String>();
 		
-		try {
-			File file = new File("saveGame.txt");
-			FileReader fileReader = new FileReader(file);
-			BufferedReader bufferedReader = new BufferedReader(fileReader);
-			String line;
-			while ((line = bufferedReader.readLine()) != null) {
-				strings.add(line);
-			}
-			fileReader.close();
-			for(int i = 0; i < strings.size(); i++){
+			try {
+				File file = new File("saveGame.txt");
+				if(file.exists()){
+				FileReader fileReader = new FileReader(file);
+				BufferedReader bufferedReader = new BufferedReader(fileReader);
+				String line;
+				while ((line = bufferedReader.readLine()) != null) {
+					strings.add(line);
+				}
+				fileReader.close();
+				convertToIntAndSet();
+				return true;
+				}
 
+			} catch (IOException e) {
+				e.printStackTrace();
 			}
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		convertToIntAndSet();
+			return false;
 	}
-	private static void convertToIntAndSet(){
+
+	private  void convertToIntAndSet(){
 		ProgressHandler.setLock(Integer.parseInt(strings.get(0)));
 		PlayerSave.setHealth(Integer.parseInt(strings.get(1)));
 		PlayerSave.setLives(Integer.parseInt(strings.get(2)));
