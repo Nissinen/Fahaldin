@@ -156,13 +156,7 @@ public class Player extends MapObject {
 			e.printStackTrace();
 		}
 		
-		JukeBox.load("/SFX/PlayerHitted.mp3", "playerKNOCKBACKED");
-		JukeBox.load("/SFX/Dead.mp3", "playerDIED");
-		JukeBox.load("/SFX/Jump.mp3", "playerJUMPED");
-		JukeBox.load("/SFX/HammerAttack.mp3", "hammerATTACK");
-		
 		setAnimation(IDLE);
-		
 		
 	} // end of player
 	

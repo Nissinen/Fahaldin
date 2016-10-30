@@ -20,6 +20,7 @@ public class Portal extends MapObject {
 	private double portalY;
 	private int animatedOrNot;
 	//gets portal graphics
+	// int 1 to moveportal location 0 to keep it stable
 	public Portal(TileMap tm, int animated) {
 		super(tm);
 		width = 90;

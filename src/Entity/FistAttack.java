@@ -39,8 +39,6 @@ public class FistAttack extends MapObject {
 		
 		hitSprites = Content.FistExplosion[0];
 		
-		JukeBox.load("/SFX/Explosion.mp3", "explosion");
-		
 	}
 	//checks next position
 	private void getNextPosition() {

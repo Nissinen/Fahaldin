@@ -58,6 +58,15 @@ public class MenuState extends GameState {
 			JukeBox.stop("level2");
 			JukeBox.load("/SFX/MenuSelect.mp3", "menuSelect");
 			JukeBox.load("/Music/MenuOpen.mp3", "menuOpen");
+
+			//player sfc
+			JukeBox.load("/SFX/PlayerHitted.mp3", "playerKNOCKBACKED");
+			JukeBox.load("/SFX/Dead.mp3", "playerDIED");
+			JukeBox.load("/SFX/Jump.mp3", "playerJUMPED");
+			JukeBox.load("/SFX/HammerAttack.mp3", "hammerATTACK");
+			//common explosion
+			JukeBox.load("/SFX/Explosion.mp3", "explosion");
+			
 			JukeBox.play("menuOpen");
 			
 		}

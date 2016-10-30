@@ -11,17 +11,17 @@ public class Keys {
 	
 	
 	//Gameplay buttons
-	public static int UP = 0;
-	public static int LEFT = 1;
-	public static int DOWN = 2;
-	public static int RIGHT = 3;
-	public static int BUTTONZ = 4;
-	public static int BUTTONX = 5;
-	public static int BUTTONC = 6;
-	public static int BUTTONV = 7;
-	public static int BUTTONS = 8;
-	public static int ENTER = 9;
-	public static int ESCAPE = 10;
+	public static final int UP = 0;
+	public static final int LEFT = 1;
+	public static final int DOWN = 2;
+	public static final int RIGHT = 3;
+	public static final int BUTTONZ = 4;
+	public static final int BUTTONX = 5;
+	public static final int BUTTONC = 6;
+	public static final int BUTTONV = 7;
+	public static final int BUTTONS = 8;
+	public static final int ENTER = 9;
+	public static final int ESCAPE = 10;
 	
 	
 	//Checks pressed buttons
